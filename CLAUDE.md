@@ -24,7 +24,7 @@ When starting work on a new project here:
 ## Projects
 
 ### claude-notifier
-Windows toast notification system for Claude Code. Hooks into `Stop` and `Notification` events to show a toast + play a sound when Claude finishes or needs input. Includes a system tray app (`tray.ps1`) for toggling sound/toast and changing the sound file. Settings persisted in `config.json`. Requires the `BurntToast` PowerShell module.
+Windows toast notification system for Claude Code. Hooks into `Stop` and `Notification` events to show a toast + play a sound when Claude finishes or needs input. Includes a system tray app (`tray.ps1`) for toggling sound/toast and changing the sound file. Settings persisted in `config.json`. Requires the `BurntToast` PowerShell module. Supports UTF-8 (non-ASCII text like Cyrillic displays correctly in toasts).
 
 - Install/reinstall: `.\claude-notifier\install.ps1`
 - Test: `.\claude-notifier\test.ps1 [-Type stop|permission|idle|question|all]`

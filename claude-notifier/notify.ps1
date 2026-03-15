@@ -8,6 +8,10 @@
 
 $ErrorActionPreference = 'SilentlyContinue'
 
+# --- Ensure UTF-8 so non-ASCII text (e.g. Cyrillic) renders correctly ---
+[Console]::InputEncoding  = [System.Text.Encoding]::UTF8
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+
 # --- Read stdin payload ---
 $rawInput = [Console]::In.ReadToEnd()
 $payload  = $rawInput | ConvertFrom-Json

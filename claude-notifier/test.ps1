@@ -21,6 +21,8 @@ $testCwd    = 'C:/Users/Serhiy Sakharuk/ClaudeCode/ClaudeFeatures'
 function Send-TestNotification($payload) {
     $json = $payload | ConvertTo-Json -Compress
     Write-Host "Sending: $json" -ForegroundColor Cyan
+    # Pipe with UTF-8 so non-ASCII (Cyrillic, etc.) survives transit
+    [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
     $json | powershell -NonInteractive -WindowStyle Hidden -File $scriptPath
     Start-Sleep -Seconds 2
 }
