@@ -30,6 +30,13 @@ Windows toast notification system for Claude Code. Hooks into `Stop` and `Notifi
 - Test: `.\claude-notifier\test.ps1 [-Type stop|permission|idle|question|all]`
 - Uninstall: `.\claude-notifier\uninstall.ps1`
 
+### claude-usage-widget
+Floating desktop widget showing Claude Code session (5h) and weekly (7d) usage limits with progress bars and reset countdowns. Reads OAuth credentials from `~/.claude/.credentials.json` and makes a minimal Haiku API call (1 token) to get rate-limit response headers. Requires Node.js. Runs detached from terminals via `launch.vbs`. Right-click for size (S/M/L) and auto-refresh interval options.
+
+- Install/launch: `.\claude-usage-widget\install.ps1`
+- Restart: `.\claude-usage-widget\_restart.ps1`
+- Uninstall: `.\claude-usage-widget\uninstall.ps1`
+
 ## Per-project guidance
 
 If a project has its own `CLAUDE.md` or `README.md`, that takes precedence over this file for anything project-specific (build commands, test runners, architecture, etc.).
