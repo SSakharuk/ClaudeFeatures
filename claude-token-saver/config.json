@@ -6,9 +6,12 @@
     "gitLog": 100,
     "test": 200,
     "build": 150,
-    "lint": 300
+    "lint": 300,
+    "docker": 50
   },
   "maxLineWidth": 500,
   "maxTotalChars": 80000,
-  "gitLogLimit": 30
+  "gitLogLimit": 30,
+  "teeOnFailure": true,
+  "teeMaxFiles": 10
 }
