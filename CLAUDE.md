@@ -37,6 +37,15 @@ Floating desktop widget showing Claude Code session (5h) and weekly (7d) usage l
 - Restart: `.\claude-usage-widget\_restart.ps1`
 - Uninstall: `.\claude-usage-widget\uninstall.ps1`
 
+### claude-token-saver
+Lightweight token saver for Claude Code. PreToolUse hook intercepts Bash commands (git, npm, test runners, build tools), rewrites them through a Node.js filter runner that compresses output. Strategies: git status `-sb`, git log `--oneline -30`, diff/show truncation, test failure extraction, build error filtering, ANSI stripping, blank line collapsing. Tracks savings to `~/.claude-token-saver/log.jsonl`. Zero external dependencies (pure Node.js). Bypass any command with `# nofilter` suffix.
+
+- Install: `.\claude-token-saver\install.ps1`
+- Test: `.\claude-token-saver\test.ps1 [-Type all|git-status|git-diff|git-log|git-show|ansi]`
+- Stats: `node claude-token-saver\stats.js [--today|--week|--all|--reset]`
+- Config: `claude-token-saver\config.json` (max lines, line width, total chars cap)
+- Uninstall: `.\claude-token-saver\uninstall.ps1`
+
 ## Per-project guidance
 
 If a project has its own `CLAUDE.md` or `README.md`, that takes precedence over this file for anything project-specific (build commands, test runners, architecture, etc.).

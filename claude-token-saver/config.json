@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "maxLines": {
+    "gitDiff": 500,
+    "gitShow": 500,
+    "gitLog": 100,
+    "test": 200,
+    "build": 150,
+    "lint": 300
+  },
+  "maxLineWidth": 500,
+  "maxTotalChars": 80000,
+  "gitLogLimit": 30
+}
